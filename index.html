@@ -16,6 +16,7 @@
         }
         .container {
             max-width: 960px; /* Max width for content */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow for main container */
         }
         /* Style for section titles */
         h2 {
@@ -33,6 +34,65 @@
             color: #3b82f6; /* Slightly darker blue on hover */
             text-decoration: underline;
         }
+        .credential-link, .header-link-button {
+            display: inline-block;
+            background-color: #1f2937; /* Dark gray button background */
+            color: #9ca3af; /* Light gray text for button */
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.375rem; /* Rounded corners */
+            font-size: 0.875rem; /* Smaller font size */
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.1s ease-in-out;
+            border: 1px solid #4b5563; /* Subtle border */
+        }
+        .credential-link:hover, .header-link-button:hover {
+            background-color: #374151; /* Darker on hover */
+            color: #e5e7eb; /* Lighter text on hover */
+            text-decoration: none; /* No underline on button hover */
+            transform: translateY(-1px); /* Slight lift effect */
+        }
+        .skill-item {
+            display: inline-flex; /* Use flex to align text and image */
+            align-items: center; /* Vertically center items */
+            background-color: #1a1a1a; /* Slightly darker background for skill box */
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+            margin-right: 0.5rem; /* Space between skill boxes */
+            margin-bottom: 0.5rem; /* Space below skill boxes */
+            border: 1px solid #2d2d2d; /* Subtle border for skill box */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for skill box */
+            white-space: nowrap; /* Prevent wrapping for skill items */
+        }
+        .skill-logo {
+            width: 1.25rem; /* Adjust size of the logo */
+            height: 1.25rem;
+            margin-right: 0.5rem; /* Space between logo and text */
+            vertical-align: middle; /* Align with text */
+            flex-shrink: 0; /* Prevent logo from shrinking */
+        }
+        /* Specific adjustments for certain logos */
+        .skill-logo.github {
+            filter: invert(1); /* Invert color for dark theme if original is black */
+        }
+        .skill-logo.c-lang {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+        .skill-logo.js {
+            width: 1.1rem;
+            height: 1.1rem;
+        }
+        .skill-logo.html5 {
+            width: 1.1rem;
+            height: 1.1rem;
+        }
+        .skill-logo.css3 {
+            width: 1.1rem;
+            height: 1.1rem;
+        }
+        .skill-logo.sql {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
     </style>
 </head>
 <body class="antialiased bg-gray-950 text-gray-200">
@@ -40,14 +100,16 @@
         <!-- Header Section -->
         <header class="text-center mb-8">
             <h1 class="text-4xl font-bold text-white mb-2">Udarsh Goyal</h1>
-            <p class="text-xl text-gray-400 mb-4">Aspiring Software Engineer | CS50x & CS50 Python Certified</p>
+            <p class="text-xl text-gray-400 mb-4">Aspiring Software Developer | CS50x & CS50 Python Certified</p>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-300">
                 <p>Email: <a href="mailto:udarshgoyal@gmail.com" class="hover:text-blue-400">udarshgoyal@gmail.com</a></p>
                 <p>Alternate Email: <a href="mailto:udarshcodes@gmail.com" class="hover:text-blue-400">udarshcodes@gmail.com</a></p>
                 <p>Location: Chennai, Tamil Nadu, India</p>
             </div>
             <div class="flex justify-center mt-4 space-x-4">
-                <a href="https://github.com/udarshcodes" target="_blank" class="text-gray-300 hover:text-blue-400 flex items-center">
+                <a href="https://github.com/udarshcodes" target="_blank" class="header-link-button flex items-center">
+                    <!-- GitHub Logo in Header -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="skill-logo github">
                     GitHub
                 </a>
                 <!-- LinkedIn removed as requested -->
@@ -58,7 +120,7 @@
         <section class="mb-8">
             <h2 class="text-2xl font-semibold text-white">Summary</h2>
             <p class="text-gray-300 leading-relaxed">
-                Highly motivated and detail-oriented B.Tech Computer Science student at Vellore Institute of Technology, with a strong foundation in computer science principles gained through Harvard University's CS50x and CS50p courses. Eager to apply problem-solving skills and a passion for learning to contribute to innovative software development projects. Proficient in C, Python, SQL, and basic web technologies (HTML, CSS, Flask).
+                Highly motivated and detail-oriented B.Tech Computer Science student at Vellore Institute of Technology. I am passionate about exploring computer science and problem-solving, having built a strong foundation through Harvard University's CS50x and CS50p courses. Eager to apply my skills and a continuous learning mindset to contribute to innovative software development projects. Proficient in C, Python, SQL, and basic web technologies (HTML, CSS, Flask).
             </p>
         </section>
 
@@ -82,10 +144,7 @@
                     <li>Developed problem-solving skills through various programming assignments in C, Python, SQL, and JavaScript.</li>
                     <li>Explored concepts like web development, databases, and cybersecurity.</li>
                 </ul>
-            </div>
-            <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
-                <h3 class="text-xl font-medium text-white">Harvard University</h3>
-                <p class="text-gray-400">CS50p: Introduction to Programming with Python</p>
+                <p class="text-gray-400 mt-4">CS50p: Introduction to Programming with Python</p>
                 <p class="text-gray-400 text-sm">Issued: July 2025</p>
                 <ul class="list-disc list-inside text-gray-300 mt-2">
                     <li>Mastered Python programming fundamentals, including functions, arguments, return values, and data structures.</li>
@@ -98,7 +157,12 @@
         <section class="mb-8">
             <h2 class="text-2xl font-semibold text-white">Certifications</h2>
             <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
-                <h3 class="text-xl font-medium text-white">Python (Basic)</h3>
+                <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-xl font-medium text-white">Python (Basic)</h3>
+                    <a href="https://www.hackerrank.com/certificates/iframe/b1da9ee1971e" target="_blank" class="credential-link">
+                        Show Credential
+                    </a>
+                </div>
                 <p class="text-gray-400">HackerRank</p>
                 <p class="text-gray-400 text-sm">Earned: July 21, 2025</p>
                 <ul class="list-disc list-inside text-gray-300 mt-2">
@@ -106,7 +170,12 @@
                 </ul>
             </div>
             <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
-                <h3 class="text-xl font-medium text-white">CS50's Introduction to Programming with Python</h3>
+                <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-xl font-medium text-white">CS50's Introduction to Programming with Python</h3>
+                    <a href="https://cs50.harvard.edu/certificates/9e4da3bf-acdf-4c38-b286-2fa2353507ef" target="_blank" class="credential-link">
+                        Show Credential
+                    </a>
+                </div>
                 <p class="text-gray-400">Harvard University</p>
                 <p class="text-gray-400 text-sm">Issued: July 2025</p>
                 <ul class="list-disc list-inside text-gray-300 mt-2">
@@ -114,7 +183,12 @@
                 </ul>
             </div>
             <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
-                <h3 class="text-xl font-medium text-white">CS50x: Introduction to Computer Science</h3>
+                <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-xl font-medium text-white">CS50x: Introduction to Computer Science</h3>
+                    <a href="https://cs50.harvard.edu/certificates/03151a38-8bcc-4fad-a62d-be78d665636f" target="_blank" class="credential-link">
+                        Show Credential
+                    </a>
+                </div>
                 <p class="text-gray-400">Harvard University</p>
                 <p class="text-gray-400 text-sm">Issued: June 2025</p>
                 <ul class="list-disc list-inside text-gray-300 mt-2">
@@ -136,10 +210,10 @@
             </div>
             <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
                 <h3 class="text-xl font-medium text-white">VITEEE - VIT Engineering Entrance Examination</h3>
-                <p class="text-gray-400">Score: Top 11% of 300k+ applicants</p>
+                <p class="text-gray-400">Score: Top 1% of 300k+ applicants</p>
                 <p class="text-gray-400 text-sm">April 2025</p>
                 <ul class="list-disc list-inside text-gray-300 mt-2">
-                    <li>Qualified among the top ~11% of candidates for admission to Vellore Institute of Technology.</li>
+                    <li>Qualified among the top ~1% of candidates for admission to Vellore Institute of Technology.</li>
                 </ul>
             </div>
         </section>
@@ -147,23 +221,70 @@
         <!-- Skills Section -->
         <section class="mb-8">
             <h2 class="text-2xl font-semibold text-white">Skills</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-300">
-                <div>
-                    <h3 class="text-lg font-medium text-white mb-1">Programming Languages:</h3>
-                    <p>C, Python, JavaScript, HTML, CSS, SQL</p>
+            <div class="flex flex-wrap gap-2 text-gray-300">
+                <h3 class="text-lg font-medium text-white w-full mb-1">Programming Languages:</h3>
+                <div class="skill-item">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python Logo" class="skill-logo">
+                    Python
                 </div>
-                <div>
-                    <h3 class="text-lg font-medium text-white mb-1">Frameworks & Libraries:</h3>
-                    <p>Flask</p>
+                <div class="skill-item">
+                    <!-- C Language Logo - Found on Wikimedia Commons, simple C logo -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C Logo" class="skill-logo c-lang">
+                    C
                 </div>
-                <div>
-                    <h3 class="text-lg font-medium text-white mb-1">Tools & Platforms:</h3>
-                    <p>Git, GitHub, VS Code, PyCharm</p>
+                <div class="skill-item">
+                    <!-- JavaScript Logo - Found on Wikimedia Commons, official JS logo -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript Logo" class="skill-logo js">
+                    JavaScript
                 </div>
-                <div>
-                    <h3 class="text-lg font-medium text-white mb-1">Concepts:</h3>
-                    <p>Data Structures, Algorithms, Object-Oriented Programming (OOP), Web Development</p>
+                <div class="skill-item">
+                    <!-- HTML5 Logo - Found on Wikimedia Commons, official HTML5 logo -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5 Logo" class="skill-logo html5">
+                    HTML
                 </div>
+                <div class="skill-item">
+                    <!-- CSS3 Logo - Found on Wikimedia Commons, official CSS3 logo -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3 Logo" class="skill-logo css3">
+                    CSS
+                </div>
+                <div class="skill-item">
+                    <!-- SQL Logo - Generic database icon, commonly used for SQL -->
+                    <img src="https://www.mysql.com/common/logos/includes-mysql-88x31.png" alt="SQL Logo" class="skill-logo sql">
+                    SQL
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-2 text-gray-300 mt-4">
+                <h3 class="text-lg font-medium text-white w-full mb-1">Frameworks & Libraries:</h3>
+                <div class="skill-item">
+                    <!-- Flask Logo - Found on Wikimedia Commons -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" alt="Flask Logo" class="skill-logo">
+                    Flask
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-2 text-gray-300 mt-4">
+                <h3 class="text-lg font-medium text-white w-full mb-1">Tools & Platforms:</h3>
+                <div class="skill-item">
+                    <!-- Git Logo - Found on Wikimedia Commons -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git Logo" class="skill-logo">
+                    Git
+                </div>
+                <div class="skill-item">
+                    <!-- GitHub Logo - Found on Wikimedia Commons -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="skill-logo github">
+                    GitHub
+                </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000" alt="VS Logo" class="skill-logo">
+                    VS Code
+                    </div>
+                <div class="skill-item">PyCharm</div>
+            </div>
+            <div class="flex flex-wrap gap-2 text-gray-300 mt-4">
+                <h3 class="text-lg font-medium text-white w-full mb-1">Concepts:</h3>
+                <div class="skill-item">Data Structures</div>
+                <div class="skill-item">Algorithms</div>
+                <div class="skill-item">Object-Oriented Programming (OOP)</div>
+                <div class="skill-item">Web Development</div>
             </div>
         </section>
 

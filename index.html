@@ -11,84 +11,83 @@
         /* Custom styles to ensure Inter font is applied and for general aesthetics */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
-            color: #333; /* Darker text for readability */
+            background-color: #0a0a0a; /* Very dark background */
+            color: #e5e7eb; /* Light gray text for readability */
         }
         .container {
             max-width: 960px; /* Max width for content */
         }
         /* Style for section titles */
         h2 {
-            border-bottom: 2px solid #e5e7eb; /* Light gray border under titles */
+            border-bottom: 2px solid #374151; /* Darker gray border under titles */
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
         }
         /* General link styling */
         a {
-            color: #2563eb; /* Blue for links */
+            color: #60a5fa; /* Lighter blue for links on dark background */
             text-decoration: none;
+            transition: color 0.2s ease-in-out; /* Smooth transition for hover */
         }
         a:hover {
+            color: #3b82f6; /* Slightly darker blue on hover */
             text-decoration: underline;
         }
     </style>
 </head>
-<body class="antialiased">
-    <div class="container mx-auto p-4 sm:p-6 lg:p-8 bg-white shadow-lg rounded-lg my-8">
+<body class="antialiased bg-gray-950 text-gray-200">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8 bg-gray-900 shadow-lg rounded-lg my-8">
         <!-- Header Section -->
         <header class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-gray-800 mb-2">Udharsh Goyal</h1>
-            <p class="text-xl text-gray-600 mb-4">Aspiring Software Engineer | CS50x & CS50p Graduate</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-700">
-                <p>Email: <a href="mailto:udarshgoyal@gmail.com" class="hover:text-blue-700">udarshgoyal@gmail.com</a></p>
-                <p>Alternate Email: <a href="mailto:udarshcodes@gmail.com" class="hover:text-blue-700">udarshcodes@gmail.com</a></p>
-                <p>Location: India</p>
+            <h1 class="text-4xl font-bold text-white mb-2">Udarsh Goyal</h1>
+            <p class="text-xl text-gray-400 mb-4">Aspiring Software Engineer | CS50x & CS50 Python Certified</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-300">
+                <p>Email: <a href="mailto:udarshgoyal@gmail.com" class="hover:text-blue-400">udarshgoyal@gmail.com</a></p>
+                <p>Alternate Email: <a href="mailto:udarshcodes@gmail.com" class="hover:text-blue-400">udarshcodes@gmail.com</a></p>
+                <p>Location: Chennai, Tamil Nadu, India</p>
             </div>
             <div class="flex justify-center mt-4 space-x-4">
-                <a href="https://github.com/udarshcodes" target="_blank" class="text-gray-700 hover:text-blue-700">
-                    <img src="https://placehold.co/24x24/cccccc/333333?text=GH" alt="GitHub" class="inline-block mr-1"> GitHub
+                <a href="https://github.com/udarshcodes" target="_blank" class="text-gray-300 hover:text-blue-400 flex items-center">
+                    GitHub
                 </a>
-                <a href="https://linkedin.com/in/udarsh-goyal-9b1a01375/" target="_blank" class="text-gray-700 hover:text-blue-700">
-                    <img src="https://placehold.co/24x24/cccccc/333333?text=LI" alt="LinkedIn" class="inline-block mr-1"> LinkedIn
-                </a>
-                <!-- Add more social links as needed -->
+                <!-- LinkedIn removed as requested -->
             </div>
         </header>
 
         <!-- Summary Section -->
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-800">Summary</h2>
-            <p class="text-gray-700 leading-relaxed">
+            <h2 class="text-2xl font-semibold text-white">Summary</h2>
+            <p class="text-gray-300 leading-relaxed">
                 Highly motivated and detail-oriented B.Tech Computer Science student at Vellore Institute of Technology, with a strong foundation in computer science principles gained through Harvard University's CS50x and CS50p courses. Eager to apply problem-solving skills and a passion for learning to contribute to innovative software development projects. Proficient in C, Python, SQL, and basic web technologies (HTML, CSS, Flask).
             </p>
         </section>
 
         <!-- Education Section -->
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-800">Education</h2>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">Vellore Institute of Technology (VIT)</h3>
-                <p class="text-gray-600">Bachelor of Technology, Computer Science</p>
-                <p class="text-gray-600 text-sm">July 2025 – July 2029</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
+            <h2 class="text-2xl font-semibold text-white">Education</h2>
+            <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
+                <h3 class="text-xl font-medium text-white">Vellore Institute of Technology (VIT)</h3>
+                <p class="text-gray-400">Bachelor of Technology, Computer Science</p>
+                <p class="text-gray-400 text-sm">July 2025 – July 2029</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
                     <li>Currently pursuing a comprehensive curriculum in Computer Science.</li>
                 </ul>
             </div>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">Harvard University via edX</h3>
-                <p class="text-gray-600">CS50x: Introduction to Computer Science</p>
-                <p class="text-gray-600 text-sm">Issued: June 2025</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
+            <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
+                <h3 class="text-xl font-medium text-white">Harvard University</h3>
+                <p class="text-gray-400">CS50x: Introduction to Computer Science</p>
+                <p class="text-gray-400 text-sm">Issued: June 2025</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
                     <li>Gained foundational knowledge in algorithms, data structures, and software engineering.</li>
                     <li>Developed problem-solving skills through various programming assignments in C, Python, SQL, and JavaScript.</li>
                     <li>Explored concepts like web development, databases, and cybersecurity.</li>
                 </ul>
             </div>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">Harvard University via edX</h3>
-                <p class="text-gray-600">CS50p: Introduction to Programming with Python</p>
-                <p class="text-gray-600 text-sm">Issued: July 2025</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
+            <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
+                <h3 class="text-xl font-medium text-white">Harvard University</h3>
+                <p class="text-gray-400">CS50p: Introduction to Programming with Python</p>
+                <p class="text-gray-400 text-sm">Issued: July 2025</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
                     <li>Mastered Python programming fundamentals, including functions, arguments, return values, and data structures.</li>
                     <li>Developed practical skills in file I/O, regular expressions, and object-oriented programming in Python.</li>
                 </ul>
@@ -97,28 +96,28 @@
 
         <!-- Certifications Section -->
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-800">Certifications</h2>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">Python (Basic)</h3>
-                <p class="text-gray-600">HackerRank</p>
-                <p class="text-gray-600 text-sm">Earned: July 21, 2025</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
+            <h2 class="text-2xl font-semibold text-white">Certifications</h2>
+            <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
+                <h3 class="text-xl font-medium text-white">Python (Basic)</h3>
+                <p class="text-gray-400">HackerRank</p>
+                <p class="text-gray-400 text-sm">Earned: July 21, 2025</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
                     <li>Demonstrated foundational proficiency in Python programming through a skill certification test.</li>
                 </ul>
             </div>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">CS50's Introduction to Programming with Python</h3>
-                <p class="text-gray-600">Harvard University via edX</p>
-                <p class="text-gray-600 text-sm">Issued: July 2025</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
+            <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
+                <h3 class="text-xl font-medium text-white">CS50's Introduction to Programming with Python</h3>
+                <p class="text-gray-400">Harvard University</p>
+                <p class="text-gray-400 text-sm">Issued: July 2025</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
                     <li>Official certification for completing CS50p.</li>
                 </ul>
             </div>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">CS50x: Introduction to Computer Science</h3>
-                <p class="text-gray-600">Harvard University via edX</p>
-                <p class="text-gray-600 text-sm">Issued: June 2025</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
+            <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
+                <h3 class="text-xl font-medium text-white">CS50x: Introduction to Computer Science</h3>
+                <p class="text-gray-400">Harvard University</p>
+                <p class="text-gray-400 text-sm">Issued: June 2025</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
                     <li>Official certification for completing CS50x.</li>
                 </ul>
             </div>
@@ -126,20 +125,20 @@
 
         <!-- Test Scores Section -->
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-800">Test Scores</h2>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">JEE Main 2025 (Joint Entrance Examination - India)</h3>
-                <p class="text-gray-600">Score: Top 16.61% of 1.5M+ applicants</p>
-                <p class="text-gray-600 text-sm">April 2025</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
+            <h2 class="text-2xl font-semibold text-white">Test Scores</h2>
+            <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
+                <h3 class="text-xl font-medium text-white">JEE Main 2025 (Joint Entrance Examination - India)</h3>
+                <p class="text-gray-400">Score: Top 16.61% of 1.5M+ applicants</p>
+                <p class="text-gray-400 text-sm">April 2025</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
                     <li>Qualified among the top 16.61% of approximately 1.54 million candidates.</li>
                 </ul>
             </div>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">VITEEE - VIT Engineering Entrance Examination</h3>
-                <p class="text-gray-600">Score: Top 11% of 300k+ applicants</p>
-                <p class="text-gray-600 text-sm">April 2025</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
+            <div class="mb-4 p-4 bg-gray-800 rounded-md shadow-inner">
+                <h3 class="text-xl font-medium text-white">VITEEE - VIT Engineering Entrance Examination</h3>
+                <p class="text-gray-400">Score: Top 11% of 300k+ applicants</p>
+                <p class="text-gray-400 text-sm">April 2025</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
                     <li>Qualified among the top ~11% of candidates for admission to Vellore Institute of Technology.</li>
                 </ul>
             </div>
@@ -147,60 +146,47 @@
 
         <!-- Skills Section -->
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-800">Skills</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-700">
+            <h2 class="text-2xl font-semibold text-white">Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-300">
                 <div>
-                    <h3 class="text-lg font-medium text-gray-800 mb-1">Programming Languages:</h3>
-                    <p>C, Python, SQL, JavaScript</p>
+                    <h3 class="text-lg font-medium text-white mb-1">Programming Languages:</h3>
+                    <p>C, Python, JavaScript, HTML, CSS, SQL</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-medium text-gray-800 mb-1">Web Technologies:</h3>
-                    <p>HTML, CSS, Flask, Tailwind CSS</p>
+                    <h3 class="text-lg font-medium text-white mb-1">Frameworks & Libraries:</h3>
+                    <p>Flask</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-medium text-gray-800 mb-1">Tools & Platforms:</h3>
-                    <p>Git, GitHub, VS Code</p>
+                    <h3 class="text-lg font-medium text-white mb-1">Tools & Platforms:</h3>
+                    <p>Git, GitHub, VS Code, PyCharm</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-medium text-gray-800 mb-1">Concepts:</h3>
-                    <p>Algorithms, Data Structures, Object-Oriented Programming, Problem Solving, Debugging</p>
+                    <h3 class="text-lg font-medium text-white mb-1">Concepts:</h3>
+                    <p>Data Structures, Algorithms, Object-Oriented Programming (OOP), Web Development</p>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section (Crucial for CS50x/p Grads) -->
+        <!-- Projects Section (Placeholder) -->
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-800">Projects</h2>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">CS50x Final Project: [Your Project Name Here]</h3>
-                <p class="text-gray-600 text-sm">Technologies Used: [e.g., Python, Flask, SQL, HTML, CSS]</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
-                    <li>Brief description of your CS50x final project and its purpose.</li>
-                    <li>Explain the problem it solves and how you built it, highlighting key features.</li>
-                    <li><a href="https://github.com/udarshcodes/your-cs50x-project-repo" target="_blank" class="hover:text-blue-700">GitHub Repository</a> | <a href="#" target="_blank" class="hover:text-blue-700">Live Demo (if applicable)</a></li>
-                </ul>
-            </div>
-            <div class="mb-4">
-                <h3 class="text-xl font-medium text-gray-800">CS50p Final Project: [Your Project Name Here]</h3>
-                <p class="text-gray-600 text-sm">Technologies Used: [e.g., Python, specific libraries]</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2">
-                    <li>Brief description of your CS50p final project and its purpose.</li>
-                    <li>Detail the Python concepts and libraries you utilized.</li>
-                    <li><a href="https://github.com/udarshcodes/your-cs50p-project-repo" target="_blank" class="hover:text-blue-700">GitHub Repository</a> | <a href="#" target="_blank" class="hover:text-blue-700">Live Demo (if applicable)</a></li>
-                </ul>
-            </div>
-            <!-- Add more projects if you have them -->
+            <h2 class="text-2xl font-semibold text-white">Projects</h2>
+            <p class="text-gray-300">
+                <i>(To be added soon: Details on personal projects demonstrating practical application of skills.)</i>
+            </p>
+        </section>
+
+        <!-- Interests Section (Placeholder) -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-white">Interests</h2>
+            <p class="text-gray-300">
+                <i>(To be added soon: Information on personal interests and hobbies.)</i>
+            </p>
         </section>
 
         <!-- Footer Section -->
-        <footer class="text-center text-gray-600 text-sm mt-8 pt-4 border-t border-gray-200">
-            <p>&copy; 2025 Udharsh Goyal. All rights reserved.</p>
-            <p>Built with HTML and Tailwind CSS.</p>
+        <footer class="text-center text-gray-500 text-sm mt-8 pt-4 border-t border-gray-700">
+            <p>&copy; 2025 Udarsh Goyal. All rights reserved.</p>
         </footer>
     </div>
-
-    <script>
-        console.log("Udharsh Goyal's CV website loaded!");
-    </script>
 </body>
 </html>
